@@ -1,6 +1,11 @@
-# Flask + EsiPy Example
+# EVE-ESI-CVA-SRP-TAX 
+# Eve Online ( An MMO ) ESI ( the CCP API ) CVA ( my alliance, don't hate me) Spreadsheet Replacement Program ( this here project ) Taxation 
 
-This project is a small ready to work example on how to use EsiPy with Flask.
+This project is to show how the current manual google spreadsheet used to calculate monthly taxes could be replaced with a nice automated system using the ESI.
+
+Yes, this is a fork of Kyria's flask-esipy-example, I hope they do not mind me taking their excellent base code and mogrifying it into something else for demonstration.
+
+# It is not really meant for other organizations to use, but I will try to make it as Alliance/Corporation agnostic as possible.
 
 The following libraries are used:
 * Flask _for the webapp part_
@@ -11,27 +16,27 @@ The following libraries are used:
 
 You will also require:
 * __Virtualenv__ to setup virtualenv
-* Depending on the database you want to use, the required libraries (by default this example uses SQLite, which is embedded in Python)
+* PostgreSQL ( I am done with MySQL.  Oracle is the devil.  No, I don't want to learn about managing SQLLite )
 
-__Also, this example is made with Python 2.7, it might works with Python 3, but you may have to correct some lines of code__
+__This is made with Python 3 in mind, if you are on 2.7 I am sorry__
 
-## Get and init the project
+## Get and init the project 
 
 1. Clone the repository on your system
 ```shell
-git clone https://github.com/Kyria/flask-esipy-example.git
+git clone https://github.com/excoecariaagallocha/eve-esi-cva-srp-tax.git
 ```
 
 2. Create a virtualenv
 ```shell
-cd flask-esipy-example
+cd eve-esi-cva-srp-tax
 virtualenv venv
 source venv/bin/activate
 ```
 
 3. Install requirements
 ```shell
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 4. Setup the FLASK_APP environment variable
@@ -50,7 +55,6 @@ export FLASK_APP=app.py
 __Requirements:__
 * For the scope, you will need `esi-wallet.read_character_wallet.v1` for this example
 * The callback URL must be `http://<SOME_IP_OR_DOMAIN>:<SOME_PORT>/sso/callback`
-
 
 ## APP Configuration
 
@@ -89,3 +93,4 @@ python app.py
 
 And now you can connect to [http://localhost:5015/](http://localhost:5015/) to see it working (if you kept default configs)
 
+## When I get this working I'll be back to make another edit!
